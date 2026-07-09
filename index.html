@@ -74,51 +74,51 @@
     <!-- Skills Section -->
     <section class="py-5" id="skills">
         <div class="container">
-            <h2 class="section-title text-center">My Skills</h2>
-            <div class="row">
-                <div class="col-md-4">
+            <h2 class="section-title text-center reveal">My Skills</h2>
+            <div class="row stagger-children">
+                <div class="col-md-4 reveal">
                     <div class="skill-card">
                         <h4>Prompt Engineering</h4>
                         <p>Productive communication with LLM's</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 reveal">
                     <div class="skill-card">
                         <h4>Java</h4>
                         <p>Backend Programming</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 reveal">
                     <div class="skill-card">
                         <h4>HTML CSS and JavaScript</h4>
                         <p>Frontent Development</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 reveal">
                     <div class="skill-card">
                         <h4>UX</h4>
                         <p>Designing User Friendly Applications</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 reveal">
                     <div class="skill-card">
                         <h4>AI Fundamentals</h4>
                         <p>Understanding the basics of Artificial Intelligence</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 reveal">
                     <div class="skill-card">
                         <h4>Generative AI Fundamentals</h4>
                         <p>Understanding the basics of Generative AI</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 reveal">
                     <div class="skill-card">
                         <h4>AI Tools</h4>
                         <p>Proficient in using various AI tools and platforms</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 reveal">
                     <div class="skill-card">
                         <h4>Kuchipudi</h4>
                         <p>Expressing through movements</p>
@@ -131,10 +131,10 @@
     <!-- Projects Section -->
     <section class="py-5 bg-light" id="projects">
         <div class="container">
-            <h2 class="section-title text-center">My Projects</h2>
+            <h2 class="section-title text-center reveal">My Projects</h2>
             
             <!-- Frontend Projects Carousel -->
-            <h4 class="carousel-subtitle">Frontend Projects</h4>
+            <h4 class="carousel-subtitle reveal">Frontend Projects</h4>
             <div id="frontendCarousel" class="carousel slide project-carousel" data-bs-ride="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -181,7 +181,7 @@
             </div>
 
             <!-- Java Projects Carousel -->
-            <h4 class="carousel-subtitle mt-5">Java Projects</h4>
+            <h4 class="carousel-subtitle mt-5 reveal">Java Projects</h4>
             <div id="javaCarousel" class="carousel slide project-carousel" data-bs-ride="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -269,7 +269,7 @@
             </div>
 
             <!-- Collaboration Projects -->
-            <h4 class="carousel-subtitle mt-5">Collaboration Projects</h4>
+            <h4 class="carousel-subtitle mt-5 reveal">Collaboration Projects</h4>
             <div id="collabCarousel" class="carousel slide project-carousel" data-bs-ride="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -323,7 +323,7 @@
     <!-- Certificates Section -->
     <section class="py-5" id="certificates">
         <div class="container">
-            <h2 class="section-title text-center">My Certificates</h2>
+            <h2 class="section-title text-center reveal">My Certificates</h2>
             <div id="certificatesCarousel" class="carousel slide certificate-carousel" data-bs-ride="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -389,8 +389,8 @@
     <!-- Dance Journey Section -->
     <section class="py-5 bg-light" id="dance">
         <div class="container">
-            <h2 class="section-title text-center">Rhythm & Grace</h2>
-            <p class="text-center dance-subtitle">A Journey Through Kuchipudi</p>
+            <h2 class="section-title text-center reveal">Rhythm & Grace</h2>
+            <p class="text-center dance-subtitle reveal">A Journey Through Kuchipudi</p>
             <div id="danceCarousel" class="carousel slide dance-carousel" data-bs-ride="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -505,6 +505,7 @@
     ">&#8593;</button>
 
     <script>
+        // Back to Top button
         const btn = document.getElementById('backToTop');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
@@ -522,6 +523,50 @@
         btn.addEventListener('mouseleave', () => {
             btn.style.background = 'var(--black)';
             btn.style.color = 'var(--white)';
+        });
+
+        // Navbar shrink on scroll
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll reveal with IntersectionObserver
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Smooth active nav link highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.color = 'var(--white)';
+                }
+            });
         });
     </script>
 
