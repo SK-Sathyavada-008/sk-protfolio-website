@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
     <!-- CSS -->
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <h2 style="color: #f8f9fa;">SK's Portfolio</h2>
-            <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="container-fluid px-4">
+            <h2 style="color: #f8f9fa; flex-shrink:0;">SK's Portfolio</h2>
+            <div class="collapse navbar-collapse flex-nowrap align-items-center" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
@@ -39,21 +43,31 @@
                         <a class="nav-link" href="#certificates">Certificates</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#opensource">Open Source</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#community">Community</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#dance">Dance Journey</a>
                     </li>
                 </ul>
-                <div class="social-icons">
+                <div class="social-icons" style="display:flex; align-items:center; flex-shrink:0; flex-wrap:nowrap;">
                     <a href="https://www.linkedin.com/in/sk-sathyavada-b1ab53368" target="_blank" title="LinkedIn">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4B0lk6cO-FZhgOKOKVr5Fk4RIsDLEhRMFjQ&s" style="width:50px; height: 50px;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4B0lk6cO-FZhgOKOKVr5Fk4RIsDLEhRMFjQ&s"
+                            style="width:50px; height: 50px;">
                     </a>
                     <a href="https://github.com/SK-Sathyavada-008" target="_blank" title="GitHub">
-                        <img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png" style="width:50px; height:50px">
+                        <img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png"
+                            style="width:50px; height:50px">
                     </a>
                     <a href="https://www.codechef.com/users/sk_cse_39" target="_blank" title="CodeChef">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcc4DmdxxBMlUEENuRuuX1xl5uNdECh6DQDQ&s" style="width:50px; height:50px">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcc4DmdxxBMlUEENuRuuX1xl5uNdECh6DQDQ&s"
+                            style="width:50px; height:50px">
                     </a>
                     <a href="https://leetcode.com/u/xp84AERAID/" target="_blank" title="LeetCode">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" style="width:50px; height:50px; filter: invert(1);">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                            style="width:50px; height:50px; filter: invert(1);">
                     </a>
                 </div>
             </div>
@@ -132,7 +146,7 @@
     <section class="py-5 bg-light" id="projects">
         <div class="container">
             <h2 class="section-title text-center reveal">My Projects</h2>
-            
+
             <!-- Frontend Projects Carousel -->
             <h4 class="carousel-subtitle reveal">Frontend Projects</h4>
             <div id="frontendCarousel" class="carousel slide project-carousel" data-bs-ride="false">
@@ -143,7 +157,8 @@
                                 <div class="card project-card">
                                     <div class="card-body">
                                         <h5 class="card-title">Portfolio Website</h5>
-                                        <p class="card-text">Personal portfolio with modern design<br>Languages: HTML, CSS, Bootstrap, JavaScript</p>
+                                        <p class="card-text">Personal portfolio with modern design<br>Languages: HTML,
+                                            CSS, Bootstrap, JavaScript</p>
                                         <a href="#" target="_blank" class="btn btn-primary">View Project</a>
                                     </div>
                                 </div>
@@ -153,29 +168,34 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Mero Pyaaro Braj</h5>
                                         <p class="card-text">Explore Braj Dham<br>Languages: HTML, CSS, JavaScript</p>
-                                        <a href="https://sk-sathyavada-008.github.io/Mero-Pyaaro-Braj/" target="_blank" class="btn btn-primary">View Project</a>
+                                        <a href="https://sk-sathyavada-008.github.io/Mero-Pyaaro-Braj/" target="_blank"
+                                            class="btn btn-primary">View Project</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="card project-card">
                                     <div class="card-body">
-                                        <h5 class="card-title">More Coming Soon!!</h5>
-                                        <p class="card-text"><br></p>
-                                        <a href="#" target="_blank" class="btn btn-primary">Coming Soon</a>
+                                        <h5 class="card-title">Calendar</h5>
+                                        <p class="card-text">Event Calendar with Custom events and
+                                            reminders<br>Languages: React</p>
+                                        <a href="https://sk-sathyavada-008.github.io/calendar/" target="_blank"
+                                            class="btn btn-primary">View Project</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    
+
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#frontendCarousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#frontendCarousel"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#frontendCarousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#frontendCarousel"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
@@ -191,7 +211,8 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Tic-Tac-Toe</h5>
                                         <p class="card-text">Can you defeat the compiler?<br>Language: Java</p>
-                                        <a href="https://github.com/SK-Sathyavada-008/TicTacToe-SmartComputer" target="_blank" class="btn btn-primary">View Project</a>
+                                        <a href="https://github.com/SK-Sathyavada-008/TicTacToe-SmartComputer"
+                                            target="_blank" class="btn btn-primary">View Project</a>
                                     </div>
                                 </div>
                             </div>
@@ -200,7 +221,8 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Four Queens</h5>
                                         <p class="card-text">Can you place all the queens safely?<br>Language: Java</p>
-                                        <a href="https://github.com/SK-Sathyavada-008/Four-Queens" target="_blank" class="btn btn-primary">View Project</a>
+                                        <a href="https://github.com/SK-Sathyavada-008/Four-Queens" target="_blank"
+                                            class="btn btn-primary">View Project</a>
                                     </div>
                                 </div>
                             </div>
@@ -208,8 +230,10 @@
                                 <div class="card project-card">
                                     <div class="card-body">
                                         <h5 class="card-title">Quiz Analysis</h5>
-                                        <p class="card-text">Quiz analysis based on student's performance<br>Language: Java</p>
-                                        <a href="https://github.com/SK-Sathyavada-008/Quiz-Analysis" target="_blank" class="btn btn-primary">View Project</a>
+                                        <p class="card-text">Quiz analysis based on student's performance<br>Language:
+                                            Java</p>
+                                        <a href="https://github.com/SK-Sathyavada-008/Quiz-Analysis" target="_blank"
+                                            class="btn btn-primary">View Project</a>
                                     </div>
                                 </div>
                             </div>
@@ -222,7 +246,8 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Number Guessing Game</h5>
                                         <p class="card-text">Can you guess the number right?<br>Language: Java</p>
-                                        <a href="https://github.com/SK-Sathyavada-008/Number-Guessing-Game" target="_blank" class="btn btn-primary">View Project</a>
+                                        <a href="https://github.com/SK-Sathyavada-008/Number-Guessing-Game"
+                                            target="_blank" class="btn btn-primary">View Project</a>
                                     </div>
                                 </div>
                             </div>
@@ -231,7 +256,8 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Hostel Allocation</h5>
                                         <p class="card-text">Wanna run a hostel, we got you!<br>Language: Java</p>
-                                        <a href="https://github.com/SK-Sathyavada-008/Hostel-Allocation" target="_blank" class="btn btn-primary">View Project</a>
+                                        <a href="https://github.com/SK-Sathyavada-008/Hostel-Allocation" target="_blank"
+                                            class="btn btn-primary">View Project</a>
                                     </div>
                                 </div>
                             </div>
@@ -240,7 +266,8 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Brick Blitz Arcade</h5>
                                         <p class="card-text">Break the bricks combine DSA<br>Language: Java</p>
-                                        <a href="https://github.com/SK-Sathyavada-008/Game_Score_v1" target="_blank" class="btn btn-primary">View Project</a>
+                                        <a href="https://github.com/SK-Sathyavada-008/Game_Score_v1" target="_blank"
+                                            class="btn btn-primary">View Project</a>
                                     </div>
                                 </div>
                             </div>
@@ -253,7 +280,8 @@
                                     <div class="card-body">
                                         <h5 class="card-title">CineVerse</h5>
                                         <p class="card-text">DSA based OTT platform<br>Language: Java</p>
-                                        <a href="https://github.com/SK-Sathyavada-008/CineVerse-Final" target="_blank" class="btn btn-primary">View Project</a>
+                                        <a href="https://github.com/SK-Sathyavada-008/CineVerse-Final" target="_blank"
+                                            class="btn btn-primary">View Project</a>
                                     </div>
                                 </div>
                             </div>
@@ -278,9 +306,13 @@
                                 <div class="card project-card">
                                     <div class="card-body">
                                         <h5 class="card-title">AlgoVision</h5>
-                                        <p class="card-text">Stop memorizing algorithms. Start seeing them. Explore, visualize, and master DSA with interactive simulations and AI.</p>
-                                        <a href="https://algovision-krivee.lovable.app/" target="_blank" class="btn btn-primary">View Project</a>
-                                        <p class="mt-2" style="font-size:0.78rem; color:#3a3a38; letter-spacing:0.06em;">Collaborator: Veeresh Yadav</p>
+                                        <p class="card-text">Stop memorizing algorithms. Start seeing them. Explore,
+                                            visualize, and master DSA with interactive simulations and AI.</p>
+                                        <a href="https://algovision-krivee.lovable.app/" target="_blank"
+                                            class="btn btn-primary">View Project</a>
+                                        <p class="mt-2"
+                                            style="font-size:0.78rem; color:#3a3a38; letter-spacing:0.06em;">
+                                            Collaborator: Veeresh Yadav</p>
                                     </div>
                                 </div>
                             </div>
@@ -288,9 +320,13 @@
                                 <div class="card project-card">
                                     <div class="card-body">
                                         <h5 class="card-title">TimeWaste Pro</h5>
-                                        <p class="card-text">The most productive way to procrastinate<br>Language: HTML, CSS, JavaScript</p>
-                                        <a href="https://timewaste-pro.netlify.app/" target="_blank" class="btn btn-primary">View Project</a>
-                                        <p class="mt-2" style="font-size:0.78rem; color:#3a3a38; letter-spacing:0.06em;">Collaborator: Veeresh Yadav</p>
+                                        <p class="card-text">The most productive way to procrastinate<br>Language: HTML,
+                                            CSS, JavaScript</p>
+                                        <a href="https://timewaste-pro.netlify.app/" target="_blank"
+                                            class="btn btn-primary">View Project</a>
+                                        <p class="mt-2"
+                                            style="font-size:0.78rem; color:#3a3a38; letter-spacing:0.06em;">
+                                            Collaborator: Veeresh Yadav</p>
                                     </div>
                                 </div>
                             </div>
@@ -298,20 +334,26 @@
                                 <div class="card project-card">
                                     <div class="card-body">
                                         <h5 class="card-title">Velora</h5>
-                                        <p class="card-text">AI-powered search & learning engine with LRU Cache<br>Language: Java</p>
-                                        <a href="https://search-engine1.lovable.app/" target="_blank" class="btn btn-primary">View Project</a>
-                                        <p class="mt-2" style="font-size:0.78rem; color:#3a3a38; letter-spacing:0.06em;">Collaborator: Veeresh Yadav</p>
+                                        <p class="card-text">AI-powered search & learning engine with LRU
+                                            Cache<br>Language: Java</p>
+                                        <a href="https://search-engine1.lovable.app/" target="_blank"
+                                            class="btn btn-primary">View Project</a>
+                                        <p class="mt-2"
+                                            style="font-size:0.78rem; color:#3a3a38; letter-spacing:0.06em;">
+                                            Collaborator: Veeresh Yadav</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#collabCarousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#collabCarousel"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#collabCarousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#collabCarousel"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
@@ -330,17 +372,20 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="certificate-card">
-                                    <img src="c1.jpeg" alt="Certificate 1" style="height:220px; object-fit:cover; width:100%;">
+                                    <img src="c1.jpeg" alt="Certificate 1" class="cert-img"
+                                        style="height:220px; object-fit:cover; width:100%;">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="certificate-card">
-                                    <img src="c2.jpeg" alt="Certificate 2" style="height:220px; object-fit:cover; width:100%;">
+                                    <img src="c2.jpeg" alt="Certificate 2" class="cert-img"
+                                        style="height:220px; object-fit:cover; width:100%;">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="certificate-card">
-                                    <img src="c3.png" alt="Certificate 3" style="height:220px; object-fit:cover; width:100%;">
+                                    <img src="c3.png" alt="Certificate 3" class="cert-img"
+                                        style="height:220px; object-fit:cover; width:100%;">
                                 </div>
                             </div>
                         </div>
@@ -350,17 +395,20 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="certificate-card">
-                                    <img src="ai-fluency.jpg" alt="Certificate 4" style="height:220px; object-fit:cover; width:100%;">
+                                    <img src="ai-fluency.jpg" alt="Certificate 4" class="cert-img"
+                                        style="height:220px; object-fit:cover; width:100%;">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="certificate-card">
-                                    <img src="figma.jpeg" alt="Certificate 5" style="height:220px; object-fit:cover; width:100%;">
+                                    <img src="figma.jpeg" alt="Certificate 5" class="cert-img"
+                                        style="height:220px; object-fit:cover; width:100%;">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="certificate-card">
-                                    <img src="gemini.png" alt="Certificate 6" style="height:220px; object-fit:cover; width:100%;">
+                                    <img src="gemini.png" alt="Certificate 6" class="cert-img"
+                                        style="height:220px; object-fit:cover; width:100%;">
                                 </div>
                             </div>
                         </div>
@@ -369,25 +417,51 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="certificate-card">
-                                    <img src="cs50.jpg" alt="CS50 Certificate" style="height:220px; object-fit:cover; width:100%;">
+                                    <img src="cs50.jpg" alt="CS50 Certificate" class="cert-img"
+                                        style="height:220px; object-fit:cover; width:100%;">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="certificate-card">
+                                    <img src="googleai.jpeg" alt="Google AI Certificate" class="cert-img"
+                                        style="height:220px; object-fit:cover; width:100%;">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="certificate-card">
+                                    <img src="googlepeompt.jpeg" alt="Google Prompt Engineering Certificate" class="cert-img"
+                                        style="height:220px; object-fit:cover; width:100%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="certificate-card">
+                                    <img src="linguaskills.png" alt="LinguaSkills Certificate" class="cert-img"
+                                        style="height:220px; object-fit:cover; width:100%;">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#certificatesCarousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#certificatesCarousel"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#certificatesCarousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#certificatesCarousel"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
-            <a href="https://www.linkedin.com/in/sk-sathyavada-b1ab53368/details/certifications/" target="_blank">View More</a>
+            <a href="https://www.linkedin.com/in/sk-sathyavada-b1ab53368/details/certifications/" target="_blank">View
+                More</a>
         </div>
     </section>
 
     <!-- Dance Journey Section -->
-    <section class="py-5 bg-light" id="dance">
+    <section class="py-5" id="dance">
         <div class="container">
             <h2 class="section-title text-center reveal">Rhythm & Grace</h2>
             <p class="text-center dance-subtitle reveal">A Journey Through Kuchipudi</p>
@@ -462,12 +536,182 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#danceCarousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#danceCarousel"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#danceCarousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#danceCarousel"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </button>
+            </div>
+
+            <!-- Dance Certifications -->
+            <div class="dance-certs-section reveal">
+                <h4 class="community-subtitle mt-5">Dance Certifications</h4>
+                <div class="dance-certs-grid">
+                    <div class="dance-cert-card">
+                        <div class="dance-cert-icon">🎓</div>
+                        <div class="dance-cert-info">
+                            <h5>Pracheen Kala Kendra</h5>
+                            <p>Senior Diploma 2 (4th Year)</p>
+                        </div>
+                    </div>
+                    <div class="dance-cert-card">
+                        <div class="dance-cert-icon">🏅</div>
+                        <div class="dance-cert-info">
+                            <h5>SPTU</h5>
+                            <p>Kuchipudi Certification</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Contributions Section -->
+    <section class="py-5" id="opensource">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Open Source Contributions</h2>
+            <p class="text-center opensource-subtitle reveal">Merged Pull Requests</p>
+            <div class="table-responsive reveal">
+                <table class="opensource-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Project</th>
+                            <th>Tech Stack</th>
+                            <th>Issue / Feature</th>
+                            <th>PR Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>07-06-2026</td>
+                            <td>cake-built website</td>
+                            <td><span class="tech-badge">React JS</span></td>
+                            <td>Move date humanization to client-side JavaScript #3419</td>
+                            <td><a href="https://github.com/cake-build/website/pull/3419" target="_blank" class="pr-link">View PR ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td>09-07-2026</td>
+                            <td>freeCodeCamp</td>
+                            <td><span class="tech-badge">HTML</span></td>
+                            <td>Remove unnecessary hint from curriculum outline workshop #68634</td>
+                            <td><a href="https://github.com/freeCodeCamp/freeCodeCamp/pull/68634" target="_blank" class="pr-link">View PR ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td>09-07-2026</td>
+                            <td>commitpulse</td>
+                            <td><span class="tech-badge">React JS</span></td>
+                            <td>test: add SuccessGuide mock integration tests #7863 (GSSoC)</td>
+                            <td><a href="https://github.com/JhaSourav07/commitpulse/pull/7863" target="_blank" class="pr-link">View PR ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td>10-07-2026</td>
+                            <td>toolport</td>
+                            <td><span class="tech-badge">MD File</span></td>
+                            <td>Add a consolidated environment-variables reference to the docs #269</td>
+                            <td><a href="https://github.com/tsouth89/toolport/pull/278" target="_blank" class="pr-link">View PR ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td>16-07-2026</td>
+                            <td>kana-dojo</td>
+                            <td><span class="tech-badge">Documentation</span></td>
+                            <td>content: add new japan fact #24724</td>
+                            <td><a href="https://github.com/lingdojo/kana-dojo/pull/24724" target="_blank" class="pr-link">View PR ↗</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Events & Hackathons Section -->
+    <section class="py-5 bg-light" id="community">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Community & Hackathons</h2>
+
+            <!-- Hackathons -->
+            <h4 class="community-subtitle reveal">Hackathons</h4>
+            <div class="table-responsive reveal">
+                <table class="community-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Hackathon</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>17-12-2025</td>
+                            <td>Java (offline) Hackathon – 24 hrs</td>
+                            <td>KL University</td>
+                        </tr>
+                        <tr>
+                            <td>24-11-2025</td>
+                            <td>Dreamflow Buildathon</td>
+                            <td>Hack2Skills</td>
+                        </tr>
+                        <tr>
+                            <td>07-02-2026</td>
+                            <td>AlgoMath Datathon – 24 hrs</td>
+                            <td>KL University</td>
+                        </tr>
+                        <tr>
+                            <td>28-03-2026</td>
+                            <td>DSA (offline) Hackathon – 24 hrs</td>
+                            <td>KL University</td>
+                        </tr>
+                        <tr>
+                            <td>19-06-2026</td>
+                            <td>DSA (offline) Hackathon – 24 hrs</td>
+                            <td>KL University</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Community Events -->
+            <h4 class="community-subtitle mt-5 reveal">Community Events / Workshops</h4>
+            <div class="table-responsive reveal">
+                <table class="community-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Event</th>
+                            <th>Organizer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12-10-2025</td>
+                            <td>Google Dev Fest</td>
+                            <td>GDG – Hyderabad</td>
+                        </tr>
+                        <tr>
+                            <td>14-02-2026</td>
+                            <td>Felicity 2026 – IIIT Hyd – AI Workshop</td>
+                            <td>Alence</td>
+                        </tr>
+                        <tr>
+                            <td>04-04-2026</td>
+                            <td>AIML Workshop – BITS Hyd</td>
+                            <td>Techgyan</td>
+                        </tr>
+                        <tr>
+                            <td>05-04-2026</td>
+                            <td>Gen AI Workshop – BITS Hyd</td>
+                            <td>Techgyan</td>
+                        </tr>
+                        <tr>
+                            <td>11-07-2026</td>
+                            <td>DevAgentic 1.0 Workshop</td>
+                            <td>MatriXO</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -568,7 +812,44 @@
                 }
             });
         });
+        // Certificate lightbox
+        const certImgs = document.querySelectorAll('.cert-img');
+        const lightbox = document.getElementById('certLightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const closeLightbox = document.getElementById('closeLightbox');
+
+        certImgs.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeLightboxFn() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+            setTimeout(() => { lightboxImg.src = ''; }, 300);
+        }
+
+        closeLightbox.addEventListener('click', closeLightboxFn);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightboxFn();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightboxFn();
+        });
     </script>
 
+    <!-- Certificate Lightbox Modal -->
+    <div id="certLightbox" class="cert-lightbox">
+        <button id="closeLightbox" class="lightbox-close" aria-label="Close">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="">
+        </div>
+    </div>
+
 </body>
+
 </html>

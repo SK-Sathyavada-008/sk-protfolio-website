@@ -118,13 +118,14 @@ body {
 .nav-link {
     font-family: 'DM Sans', sans-serif;
     font-weight: 300;
-    font-size: 0.78rem;
-    letter-spacing: 0.18em;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--grey-mid) !important;
     transition: color 0.3s ease, transform 0.3s var(--transition-smooth);
-    padding: 6px 16px !important;
+    padding: 6px 10px !important;
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-link::after {
@@ -151,10 +152,11 @@ body {
 .social-icons a {
     color: var(--grey-mid);
     font-size: 24px;
-    margin-left: 20px;
+    margin-left: 12px;
     transition: opacity 0.3s ease, transform 0.3s var(--transition-bounce);
     opacity: 0.7;
     display: inline-block;
+    flex-shrink: 0;
 }
 
 .social-icons a:hover {
@@ -680,6 +682,224 @@ footer p {
     .hero-section {
         height: auto;
     }
+}
+
+/* ========== OPEN SOURCE SECTION ========== */
+.opensource-subtitle {
+    font-size: 0.82rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--grey-dark);
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.opensource-table,
+.community-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.84rem;
+    letter-spacing: 0.03em;
+}
+
+.opensource-table thead th,
+.community-table thead th {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--grey-dark);
+    border-bottom: 2px solid var(--grey-mid);
+    padding: 14px 16px;
+    background: transparent;
+    text-align: left;
+}
+
+.opensource-table tbody tr,
+.community-table tbody tr {
+    border-bottom: 1px solid var(--grey-subtle);
+    transition: background 0.25s ease;
+}
+
+.opensource-table tbody tr:hover,
+.community-table tbody tr:hover {
+    background: var(--grey-light);
+}
+
+.opensource-table tbody td,
+.community-table tbody td {
+    padding: 14px 16px;
+    color: var(--black);
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+.tech-badge {
+    display: inline-block;
+    background: var(--black);
+    color: var(--white);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 0;
+    font-weight: 400;
+}
+
+.pr-link {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--grey-dark);
+    text-decoration: none;
+    border-bottom: 1px solid var(--grey-mid);
+    padding-bottom: 1px;
+    white-space: nowrap;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.pr-link:hover {
+    color: var(--black);
+    border-color: var(--black);
+}
+
+/* ========== COMMUNITY SECTION ========== */
+.community-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    color: var(--black);
+}
+
+/* ========== DANCE CERTIFICATIONS ========== */
+.dance-certs-section {
+    margin-top: 60px;
+    border-top: 1px solid var(--grey-subtle);
+    padding-top: 40px;
+}
+
+.dance-certs-grid {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.dance-cert-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 30px;
+    border: 1px solid var(--grey-subtle);
+    background: var(--white);
+    flex: 1;
+    min-width: 260px;
+    transition: border-color 0.3s ease, transform 0.4s var(--transition-smooth), box-shadow 0.4s var(--transition-smooth);
+}
+
+.dance-cert-card:hover {
+    border-color: var(--grey-mid);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.dance-cert-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.dance-cert-info h5 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+    color: var(--black);
+    margin: 0 0 4px 0;
+}
+
+.dance-cert-info p {
+    font-size: 0.76rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--grey-dark);
+    margin: 0;
+}
+
+/* ========== CERTIFICATE LIGHTBOX ========== */
+.cert-img {
+    cursor: zoom-in;
+}
+
+.cert-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s var(--transition-smooth);
+}
+
+.cert-lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-content {
+    width: 75vw;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.88);
+    transition: transform 0.35s var(--transition-bounce);
+}
+
+.cert-lightbox.active .lightbox-content {
+    transform: scale(1);
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 24px;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: var(--white);
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s var(--transition-smooth);
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: rotate(90deg);
 }
 
 /* ========== SELECTION STYLE ========== */
