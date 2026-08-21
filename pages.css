@@ -1154,6 +1154,44 @@
     letter-spacing: 0.03em;
 }
 
+/* ========== DARK THEME STYLING ========== */
+[data-theme="dark"] .cert-gallery-title {
+    color: #ddd6c6 !important;
+}
+
+[data-theme="dark"] .cert-gallery-issuer,
+[data-theme="dark"] .cert-gallery-date {
+    color: #b8b0a0 !important;
+}
+
+[data-theme="dark"] .cert-gallery-card {
+    background-color: #2a2620 !important;
+    border-color: #3d3630 !important;
+}
+
+[data-theme="dark"] .cert-preview-info h5 {
+    color: #ddd6c6 !important;
+}
+
+[data-theme="dark"] .cert-preview-info p {
+    color: #b8b0a0 !important;
+}
+
+[data-theme="dark"] .cert-preview-card {
+    background-color: #2a2620 !important;
+    border-color: #3d3630 !important;
+}
+
+[data-theme="dark"] .back-btn {
+    color: #ddd6c6 !important;
+    border-color: #ddd6c6 !important;
+}
+
+[data-theme="dark"] .back-btn:hover {
+    background: #ddd6c6 !important;
+    color: #0a0a0a !important;
+}
+
 @media (max-width: 768px) {
     .cert-preview-grid {
         grid-template-columns: 1fr;

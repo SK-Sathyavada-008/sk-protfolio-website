@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | SK Sathyavada</title>
+    <meta name="description"
+        content="Projects by Sai Keerthana Sathyavada — Frontend, Java, and Collaboration projects.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=20260721">
+    <link rel="stylesheet" href="../pages.css?v=20260721">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid px-4">
+            <h2 style="color: #f8f9fa; flex-shrink:0;"><a href="../index.html"
+                    style="text-decoration:none; color:inherit;">SK's Portfolio</a></h2>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-nowrap align-items-center" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-2">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="opensource.html">Open Source</a></li>
+                    <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dance.html">Dance Journey</a></li>
+                </ul>
+                <div class="nav-actions-wrap">
+                    <div class="social-icons" style="display:flex; align-items:center; flex-shrink:0; flex-wrap:nowrap;">
+                        <a href="https://www.linkedin.com/in/sk-sathyavada-b1ab53368" target="_blank" title="LinkedIn">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4B0lk6cO-FZhgOKOKVr5Fk4RIsDLEhRMFjQ&s"
+                                style="width:50px; height:50px;">
+                        </a>
+                        <a href="https://github.com/SK-Sathyavada-008" target="_blank" title="GitHub">
+                            <img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png"
+                                style="width:50px; height:50px">
+                        </a>
+                        <a href="https://www.codechef.com/users/sk_cse_39" target="_blank" title="CodeChef">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcc4DmdxxBMlUEENuRuuX1xl5uNdECh6DQDQ&s"
+                                style="width:50px; height:50px">
+                        </a>
+                        <a href="https://leetcode.com/u/xp84AERAID/" target="_blank" title="LeetCode">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                                style="width:50px; height:50px; filter: invert(1);">
+                        </a>
+                    </div>
+                    <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Day/Night Theme" title="Toggle Day/Night Theme">
+                        <i id="themeIcon" class="bi bi-sun-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+        <div class="container">
+            <p class="page-hero-sub reveal">Code brought to life</p>
+            <h1 class="page-hero-title reveal">My Projects</h1>
+        </div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="container" style="padding-top:1.5rem; padding-bottom:0.5rem;">
+        <a href="../index.html" class="back-btn"><i class="bi bi-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <!-- Projects Section -->
+    <section class="py-5" id="projects">
+        <div class="container">
+
+            <!-- Filter & Search Toolbar -->
+            <div class="project-toolbar mb-5 reveal">
+                <div class="row g-3 align-items-center">
+                    <div class="col-md-7 col-lg-8">
+                        <div class="input-group">
+                            <span class="input-group-text bg-transparent text-muted"><i class="bi bi-search"></i></span>
+                            <input type="text" id="projectSearch" class="form-control project-search-input" placeholder="Search by title, technology, or collaborator name...">
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-lg-4 text-md-end">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-dark dropdown-toggle w-100 filter-dropdown-btn" type="button" id="categoryDropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                <i class="bi bi-funnel me-1"></i> Filter Categories (<span id="selectedCategoryCount">All</span>)
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end p-3 shadow-lg filter-dropdown-menu" aria-labelledby="categoryDropdown">
+                                <li class="form-check mb-2">
+                                    <input class="form-check-input category-checkbox" type="checkbox" value="all" id="cat-all" checked>
+                                    <label class="form-check-label fw-bold" for="cat-all">All Categories</label>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="form-check mb-2">
+                                    <input class="form-check-input category-checkbox" type="checkbox" value="frontend" id="cat-frontend" checked>
+                                    <label class="form-check-label" for="cat-frontend">Frontend Projects</label>
+                                </li>
+                                <li class="form-check mb-2">
+                                    <input class="form-check-input category-checkbox" type="checkbox" value="java" id="cat-java" checked>
+                                    <label class="form-check-label" for="cat-java">Java Projects</label>
+                                </li>
+                                <li class="form-check mb-2">
+                                    <input class="form-check-input category-checkbox" type="checkbox" value="collab" id="cat-collab" checked>
+                                    <label class="form-check-label" for="cat-collab">Collaboration Projects</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frontend Projects -->
+            <div class="project-section-wrapper mb-5" data-category="frontend">
+                <h4 class="carousel-subtitle reveal">Frontend Projects</h4>
+                <div class="row g-4 mt-1">
+                    <div class="col-md-4 project-card-col" data-title="Portfolio Website" data-tech="HTML, CSS, Bootstrap, JavaScript" data-collaborator="" data-category="frontend">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div>
+                                    <h5 class="card-title">Portfolio Website</h5>
+                                    <p class="card-text">Personal portfolio with modern design<br>Languages: HTML, CSS, Bootstrap, JavaScript</p>
+                                </div>
+                                <a href="#" target="_blank" class="btn btn-primary mt-3">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 project-card-col" data-title="Mero Pyaaro Braj" data-tech="HTML, CSS, JavaScript" data-collaborator="" data-category="frontend">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div>
+                                    <h5 class="card-title">Mero Pyaaro Braj</h5>
+                                    <p class="card-text">Explore Braj Dham<br>Languages: HTML, CSS, JavaScript</p>
+                                </div>
+                                <a href="https://sk-sathyavada-008.github.io/Mero-Pyaaro-Braj/" target="_blank" class="btn btn-primary mt-3">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 project-card-col" data-title="Calendar" data-tech="React, JavaScript" data-collaborator="" data-category="frontend">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div>
+                                    <h5 class="card-title">Calendar</h5>
+                                    <p class="card-text">Event Calendar with Custom events and reminders<br>Languages: React</p>
+                                </div>
+                                <a href="https://sk-sathyavada-008.github.io/calendar/" target="_blank" class="btn btn-primary mt-3">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Java Projects -->
+            <div class="project-section-wrapper mb-5" data-category="java">
+                <h4 class="carousel-subtitle reveal">Java Projects</h4>
+                <div class="row g-4 mt-1">
+                    <div class="col-md-4 project-card-col" data-title="CineVerse" data-tech="Java, DSA" data-collaborator="" data-category="java">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div>
+                                    <h5 class="card-title">CineVerse</h5>
+                                    <p class="card-text">DSA based OTT platform<br>Language: Java</p>
+                                </div>
+                                <a href="https://github.com/SK-Sathyavada-008/CineVerse-Final" target="_blank" class="btn btn-primary mt-3">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 project-card-col" data-title="Brick Blitz Arcade" data-tech="Java, DSA" data-collaborator="" data-category="java">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div>
+                                    <h5 class="card-title">Brick Blitz Arcade</h5>
+                                    <p class="card-text">Break the bricks combine DSA<br>Language: Java</p>
+                                </div>
+                                <a href="https://github.com/SK-Sathyavada-008/Game_Score_v1" target="_blank" class="btn btn-primary mt-3">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 project-card-col" data-title="Four Queens" data-tech="Java, Backtracking" data-collaborator="" data-category="java">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div>
+                                    <h5 class="card-title">Four Queens</h5>
+                                    <p class="card-text">Can you place all the queens safely?<br>Language: Java</p>
+                                </div>
+                                <a href="https://github.com/SK-Sathyavada-008/Four-Queens" target="_blank" class="btn btn-primary mt-3">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 project-card-col" data-title="Hostel Allocation" data-tech="Java, Data Structures" data-collaborator="" data-category="java">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div>
+                                    <h5 class="card-title">Hostel Allocation</h5>
+                                    <p class="card-text">Wanna run a hostel, we got you!<br>Language: Java</p>
+                                </div>
+                                <a href="https://github.com/SK-Sathyavada-008/Hostel-Allocation" target="_blank" class="btn btn-primary mt-3">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 project-card-col" data-title="Tic-Tac-Toe" data-tech="Java, Algorithms" data-collaborator="" data-category="java">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div>
+                                    <h5 class="card-title">Tic-Tac-Toe</h5>
+                                    <p class="card-text">Can you defeat the compiler?<br>Language: Java</p>
+                                </div>
+                                <a href="https://github.com/SK-Sathyavada-008/TicTacToe-SmartComputer" target="_blank" class="btn btn-primary mt-3">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 project-card-col" data-title="Quiz Analysis" data-tech="Java, Analytics" data-collaborator="" data-category="java">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div>
+                                    <h5 class="card-title">Quiz Analysis</h5>
+                                    <p class="card-text">Quiz analysis based on student's performance<br>Language: Java</p>
+                                </div>
+                                <a href="https://github.com/SK-Sathyavada-008/Quiz-Analysis" target="_blank" class="btn btn-primary mt-3">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collaboration Projects -->
+            <div class="project-section-wrapper mb-5" data-category="collab">
+                <h4 class="carousel-subtitle reveal">Collaboration Projects</h4>
+                <div class="row g-4 mt-1">
+                    <div class="col-md-4 project-card-col" data-title="AlgoVision" data-tech="AI, DSA, Interactive Simulations" data-collaborator="Veeresh Yadav" data-category="collab">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div>
+                                    <h5 class="card-title">AlgoVision</h5>
+                                    <p class="card-text">Explore, visualize, and master DSA with interactive simulations and AI.</p>
+                                </div>
+                                <div>
+                                    <a href="https://algovision-krivee.lovable.app/" target="_blank" class="btn btn-primary mt-3">View Project</a>
+                                    <p class="mt-2 text-collaborator" style="font-size:0.78rem; letter-spacing:0.06em;">Collaborator: Veeresh Yadav</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 project-card-col" data-title="TimeWaste Pro" data-tech="HTML, CSS, JavaScript" data-collaborator="Veeresh Yadav" data-category="collab">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div>
+                                    <h5 class="card-title">TimeWaste Pro</h5>
+                                    <p class="card-text">The most productive way to procrastinate<br>Language: HTML, CSS, JavaScript</p>
+                                </div>
+                                <div>
+                                    <a href="https://timewaste-pro.netlify.app/" target="_blank" class="btn btn-primary mt-3">View Project</a>
+                                    <p class="mt-2 text-collaborator" style="font-size:0.78rem; letter-spacing:0.06em;">Collaborator: Veeresh Yadav</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 project-card-col" data-title="Velora" data-tech="Java, AI Search, LRU Cache" data-collaborator="Veeresh Yadav" data-category="collab">
+                        <div class="card project-card h-100">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div>
+                                    <h5 class="card-title">Velora</h5>
+                                    <p class="card-text">AI-powered search &amp; learning engine with LRU Cache<br>Language: Java</p>
+                                </div>
+                                <div>
+                                    <a href="https://search-engine1.lovable.app/" target="_blank" class="btn btn-primary mt-3">View Project</a>
+                                    <p class="mt-2 text-collaborator" style="font-size:0.78rem; letter-spacing:0.06em;">Collaborator: Veeresh Yadav</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="https://github.com/SK-Sathyavada-008?tab=repositories" target="_blank" class="btn btn-outline-dark">View More on GitHub <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; SK's Portfolio</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="
+        position:fixed; bottom:36px; right:36px; width:44px; height:44px;
+        background:var(--black); color:var(--white); border:1px solid var(--grey-dark);
+        border-radius:0; font-size:1.1rem; cursor:pointer; opacity:0;
+        pointer-events:none; transition:opacity 0.3s ease, background 0.3s ease, color 0.3s ease;
+        display:flex; align-items:center; justify-content:center; z-index:999;">&#8593;</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Real-time Search & Category Checkbox Filter Logic
+        const projectSearchInput = document.getElementById('projectSearch');
+        const catAllCheckbox = document.getElementById('cat-all');
+        const catSpecificCheckboxes = document.querySelectorAll('.category-checkbox:not(#cat-all)');
+        const projectCardCols = document.querySelectorAll('.project-card-col');
+        const projectSections = document.querySelectorAll('.project-section-wrapper');
+        const selectedCategoryCount = document.getElementById('selectedCategoryCount');
+
+        if (catAllCheckbox) {
+            catAllCheckbox.addEventListener('change', () => {
+                catSpecificCheckboxes.forEach(cb => { cb.checked = catAllCheckbox.checked; });
+                filterProjects();
+            });
+        }
+
+        catSpecificCheckboxes.forEach(cb => {
+            cb.addEventListener('change', () => {
+                const anyUnchecked = Array.from(catSpecificCheckboxes).some(cb => !cb.checked);
+                catAllCheckbox.checked = !anyUnchecked;
+                filterProjects();
+            });
+        });
+
+        if (projectSearchInput) {
+            projectSearchInput.addEventListener('input', filterProjects);
+        }
+
+        function filterProjects() {
+            const query = projectSearchInput ? projectSearchInput.value.toLowerCase().trim() : '';
+            const checkedCategories = Array.from(catSpecificCheckboxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.value.toLowerCase());
+
+            if (selectedCategoryCount) {
+                selectedCategoryCount.textContent = checkedCategories.length;
+            }
+
+            let visibleCards = 0;
+            projectCardCols.forEach(cardCol => {
+                const category = (cardCol.getAttribute('data-category') || '').toLowerCase();
+                
+                const matchesCategory = checkedCategories.includes(category);
+                const title = (cardCol.getAttribute('data-title') || '').toLowerCase();
+                const tech = (cardCol.getAttribute('data-tech') || '').toLowerCase();
+                const collab = (cardCol.getAttribute('data-collaborator') || '').toLowerCase();
+                const matchesQuery = !query || title.includes(query) || tech.includes(query) || collab.includes(query);
+
+                if (matchesCategory && matchesQuery) {
+                    cardCol.style.display = 'block';
+                    cardCol.style.opacity = '1';
+                    cardCol.style.transform = 'scale(1)';
+                } else {
+                    cardCol.style.opacity = '0';
+                    cardCol.style.transform = 'scale(0.95)';
+                    cardCol.style.display = 'none';
+                }
+            });
+
+            projectSections.forEach(sec => {
+                const visibleInSec = sec.querySelectorAll('.project-card-col:not([style*="display: none"])');
+                if (visibleInSec.length > 0) {
+                    sec.style.display = 'block';
+                } else {
+                    sec.style.display = 'none';
+                }
+            });
+        }
+
+        // Day/Night Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        function setTheme(theme) {
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                document.body.setAttribute('data-theme', 'dark');
+                if (themeIcon) {
+                    themeIcon.className = 'bi bi-moon-stars-fill';
+                }
+                localStorage.setItem('portfolio-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                document.body.setAttribute('data-theme', 'light');
+                if (themeIcon) {
+                    themeIcon.className = 'bi bi-sun-fill';
+                }
+                localStorage.setItem('portfolio-theme', 'light');
+            }
+        }
+
+        const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
+        setTheme(savedTheme);
+
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+                const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                setTheme(nextTheme);
+            });
+        }
+
+        const btn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            btn.style.opacity = window.scrollY > 300 ? '1' : '0';
+            btn.style.pointerEvents = window.scrollY > 300 ? 'auto' : 'none';
+        });
+        btn.addEventListener('mouseenter', () => { btn.style.background = 'transparent'; btn.style.color = 'var(--black)'; });
+        btn.addEventListener('mouseleave', () => { btn.style.background = 'var(--black)'; btn.style.color = 'var(--white)'; });
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
+        const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+        const revealObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
+        }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+        revealEls.forEach(el => revealObs.observe(el));
+    </script>
+</body>
+</html>
